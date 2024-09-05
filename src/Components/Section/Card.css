@@ -1,0 +1,39 @@
+.custom-card {
+    width: 18rem;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    width: 290px;
+    height: 430px;
+    position: relative;
+    background: linear-gradient(to bottom, #092231, #190a1f  );
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+
+    /* Estilos de sombra y transformación al pasar el mouse */
+    box-shadow: 0px 0px 20px rgba(102, 51, 153, 0.8); /* Violeta oscuro */
+  }
+  
+  .custom-card:hover {
+    transform: translateY(-8px); /* Efecto de elevación al pasar el mouse */
+    box-shadow: 0px 0px 40px rgba(186, 85, 211, 0.8); /* Púrpura suave */
+  }
+
+
+
+
+.custom-card button {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+
+  
+
+.card-image {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+

@@ -1,0 +1,31 @@
+.custom-card {
+    width: 18rem;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    width: 290px;
+    height: 430px;
+    position: relative;
+}
+
+.custom-card button {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.custom-card:hover {
+    transform: translateY(-8px); /* Efecto de elevación al pasar el mouse */
+    box-shadow: 0px 0px 40px rgba(29, 126, 216, 3.0); /* Azul claro */
+  }
+  
+
+.card-image {
+    height: 200px;
+    /* Establece un tamaño fijo para la imagen */
+    object-fit: cover;
+    /* Ajusta la imagen para que se ajuste dentro de su contenedor manteniendo la proporción */
+    border-top-left-radius: 10px;
+    /* Ajusta los radios de borde superiores de la imagen */
+    border-top-right-radius: 10px;
+}

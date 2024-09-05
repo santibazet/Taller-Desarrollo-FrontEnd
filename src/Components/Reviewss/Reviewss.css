@@ -1,0 +1,31 @@
+.review-container {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    margin-right: 20%;
+}
+
+.review-container p {
+    margin: 8px 0;
+}
+
+.resenaUsuario a {
+    color: #29a16b;
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+.resenaUsuario a:hover {
+    text-decoration: underline;
+}
+
+.rating-container {
+    display: flex;
+    align-items: center;
+}
+
+.rating-label {
+    margin-right: 8px;
+    color:#ccc
+}

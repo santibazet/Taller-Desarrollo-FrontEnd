@@ -1,0 +1,17 @@
+.login{
+    margin-top: 55px;
+    margin-right: 250px;
+    margin-bottom: 50px;
+    margin-left: 250px;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.container {
+    margin-top: 45px;
+    width: 300px; /* O cualquier ancho deseado */
+}

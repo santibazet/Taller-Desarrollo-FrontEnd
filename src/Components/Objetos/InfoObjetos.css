@@ -1,0 +1,11 @@
+h6{
+    text-align: right;
+    margin-right: 10%;
+}
+
+.creadoUsuario {
+    color: #29a16b;
+    text-decoration: none; 
+    text-decoration: underline;
+    font-weight: bold; 
+}

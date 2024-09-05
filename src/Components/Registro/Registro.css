@@ -1,0 +1,16 @@
+.form1 {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  
+}
+
+.input1 {
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

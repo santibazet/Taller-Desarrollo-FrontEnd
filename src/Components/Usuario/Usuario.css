@@ -1,0 +1,61 @@
+.user-profile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  color: aliceblue;
+}
+
+.profile-picture img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.AddDiv {
+  position: relative;
+  width: 30%;
+  top: -185px;
+  margin-left: 60px; /* Ajusta la distancia desde el borde derecho */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: center;
+}
+
+.agregarLugar,
+.agregarObjeto {
+  width: 100%; /* Aprovecha todo el ancho disponible */
+  text-align: center; /* Centra el contenido dentro de los elementos hijos */
+}
+
+
+.user-details {
+  text-align: center;
+}
+
+.add-location-objects{
+  margin-top: 0px;
+}
+
+
+.card-container {
+  display: flex; /* Establece el contenedor como un contenedor flex */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan cuando no hay suficiente espacio horizontal */
+  justify-content: center; /* Alinea los elementos horizontalmente en el centro */
+  align-items: center; /* Alinea los elementos verticalmente en el centro */
+  width: 100%;
+}
+
+h3{
+  color: aliceblue;
+  margin-left: 15%;
+  margin-top: 5%;
+}
+
+
+
+
