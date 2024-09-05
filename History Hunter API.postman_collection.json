@@ -1,0 +1,1122 @@
+{
+	"info": {
+		"_postman_id": "f07c0c03-d986-43c2-afdb-5fbb692f80c4",
+		"name": "History Hunter API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8777413"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test@test.com\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/users/login",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Usuario\",\n    \"lastName\": \"Prueba\",\n    \"address\": \"calle prueba 123\",\n    \"email\": \"test@test.com\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/users/register",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Places",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/places",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"places"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPlace",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/places/1",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"places",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPlacesForUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/places/user/1",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"places",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": 1,\n    \"name\": \"my places\",\n    \"description\": \"this is my places\",\n    \"address\": \"calle sin numero 123\",\n    \"latitude\": -64.00,\n    \"longitude\": -43.00,\n    \"images\": [{\"url\": \"https://www.shutterstock.com/image-photo/young-lady-paddling-hard-kayak-260nw-278364347.jpg\"}],\n    \"location\": \"Rocha, Uruguay\",\n    \"type\": \"Belicos\",\n    \"characteristics\": [\"fortaleza\", \"tesoros\", \"historia\"],\n    \"score\": 7,\n    \"country\": \"Uruguay\",\n    \"region\": \"Este\"\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/places/add",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"places",
+								"add"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "My Place",
+									"disabled": true
+								},
+								{
+									"key": "descriptio",
+									"value": "this is my place",
+									"disabled": true
+								},
+								{
+									"key": "latitude",
+									"value": "-64,000",
+									"disabled": true
+								},
+								{
+									"key": "longitude",
+									"value": "-68,000",
+									"disabled": true
+								},
+								{
+									"key": "images",
+									"value": "[]",
+									"disabled": true
+								},
+								{
+									"key": "location",
+									"value": "Uruguay",
+									"disabled": true
+								},
+								{
+									"key": "watherType",
+									"value": "agua tranquila",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": 1,\n    \"name\": \"my place updated\",\n    \"description\": \"this is my places\",\n    \"address\": \"calle sin numero 123\",\n    \"latitude\": -64.00,\n    \"longitude\": -43.00,\n    \"images\": [{\"url\": \"https://www.shutterstock.com/image-photo/young-lady-paddling-hard-kayak-260nw-278364347.jpg\"}],\n        \"location\": \"Rocha, Uruguay\",\n    \"type\": \"Belicos\",\n    \"characteristics\": [\"fortaleza\", \"tesoros\", \"historia\"],\n    \"score\": 7,\n    \"country\": \"Uruguay\",\n    \"region\": \"Este\"\n}"
+						},
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/places/update/2",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"places",
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/places/delete/22",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"places",
+								"delete",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/places/search/key?name=Isla",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"places",
+								"search",
+								"key"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Isla"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search filters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/places/search/multi?name=Isla&type=Otros&country=Uruguay&region=Sur",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"places",
+								"search",
+								"multi"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Isla"
+								},
+								{
+									"key": "type",
+									"value": "Otros"
+								},
+								{
+									"key": "country",
+									"value": "Uruguay"
+								},
+								{
+									"key": "region",
+									"value": "Sur"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Founds",
+			"item": [
+				{
+					"name": "search by elementType",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/founds/search/key?elementType=Otros",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"founds",
+								"search",
+								"key"
+							],
+							"query": [
+								{
+									"key": "elementType",
+									"value": "Otros"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/founds",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"founds"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getFound",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/founds/1",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"founds",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getFoundsForUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/founds/user/1",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"founds",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"placeId\": 1,\n    \"userId\": 1,\n    \"name\": \"New Object found\",\n    \"description\": \"This is a new Object found\",\n    \"date\": \"2020-3-13\",\n    \"images\": [],\n    \"type\": \"Otros\",\n    \"region\": \"Oeste\",\n    \"city\": \"Colonia\",\n    \"country\": \"Uruguay\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/founds/add",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"founds",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"placeId\": 1,\n    \"userId\": 1,\n    \"name\": \"Updated Found object\",\n    \"description\": \"This is a new object found\",\n    \"date\": \"2020-3-13\",\n    \"images\": [{\"url\": \"https://www.tutorialspoint.com/canoeing/images/kayak.jpg\"}],\n    \"type\": \"Otros\",\n    \"region\": \"Oeste\",\n    \"city\": \"Colonia\",\n    \"country\": \"Uruguay\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/founds/update/1",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"founds",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/founds/delete/2",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"founds",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/founds/search/key?name=Anillo",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"founds",
+								"search",
+								"key"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "date",
+									"disabled": true
+								},
+								{
+									"key": "initialDate",
+									"value": "2023-01-01",
+									"disabled": true
+								},
+								{
+									"key": "endDate",
+									"value": "2023-03-01",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "Anillo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search by dates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/founds/search/key?initialDate=2023-01-01&endDate=2024-01-01",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"founds",
+								"search",
+								"key"
+							],
+							"query": [
+								{
+									"key": "initialDate",
+									"value": "2023-01-01"
+								},
+								{
+									"key": "endDate",
+									"value": "2024-01-01"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search by region",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/founds/search/key?region=Suroeste",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"founds",
+								"search",
+								"key"
+							],
+							"query": [
+								{
+									"key": "region",
+									"value": "Suroeste"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search by country",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/founds/search/key?country=Uruguay",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"founds",
+								"search",
+								"key"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "Uruguay"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search by city",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/founds/search/key?city=Colonia",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"founds",
+								"search",
+								"key"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "Colonia"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/comments",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getComment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/comments/1",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"comments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCommentForUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/comments/user/2",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"comments",
+								"user",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n     \"userId\": 1,\n      \"eventId\": 1,\n      \"comments\": \"great event\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/comments/add",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"comments",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n     \"userId\": 1,\n      \"eventId\": 1,\n      \"comment\": \"great event and place\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/comments/update/11",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"comments",
+								"update",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/comments/delete/11",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"comments",
+								"delete",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reviews",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/reviews",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getReview",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/reviews/3",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"reviews",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getReviewsForUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/reviews/user/1",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"reviews",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": 1,\n    \"placeId\": 1,\n    \"foundId\": 1,\n    \"review\": \"Excelent place and event\",\n    \"rating\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/reviews/add",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"reviews",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": 1,\n    \"placeId\": 1,\n    \"foundId\": 1,\n    \"review\": \"Excelent place and event\",\n    \"rating\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/reviews/update/8",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"reviews",
+								"update",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/reviews/delete/8",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"reviews",
+								"delete",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Favorites",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/favorites",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getFavorite",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/favorites/1",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"favorites",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getFavoritesForUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/favorites/user/1",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"favorites",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": 1,\n    \"placeId\": 1,\n    \"foundId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/favorites/add",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"favorites",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": 1,\n    \"placeId\": 1,\n    \"foundId\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/favorites/update/8",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"favorites",
+								"update",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://history-hunters-evening-api.onrender.com/favorites/delete/8",
+							"protocol": "https",
+							"host": [
+								"history-hunters-evening-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"favorites",
+								"delete",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
